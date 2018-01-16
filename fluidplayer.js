@@ -1932,6 +1932,14 @@ var fluidPlayerClass = {
         videoPlayer.parentNode.insertBefore(containerDiv, null);
     },
 
+    initMute: function() {
+        var player = this;
+        if (player.displayOptions.mute === true) {
+            var videoPlayerTag = document.getElementById(player.videoPlayerId);
+            videoPlayerTag.volume = 0;
+        }
+    },
+
     init: function(idVideoPlayer, vastTag, options) {
         var player = this;
         var videoPlayer = document.getElementById(idVideoPlayer);
@@ -1976,7 +1984,8 @@ var fluidPlayerClass = {
             htmlOnPauseBlock:         null,
             htmlOnPauseBlockWidth:    null,
             htmlOnPauseBlockHeight:   null,
-            responsive:               false
+            responsive:               false,
+            mute:                     false
         };
 
         //Overriding the default options
@@ -2019,6 +2028,8 @@ var fluidPlayerClass = {
         player.initLogo();
 
         player.initHtmlOnPauseBlock();
+
+        player.initMute();
 
         player.displayOptions.playerInitCallback();
 

@@ -113,6 +113,7 @@ Here is a description of the parameters which can be used when setting Fluid Pla
   * `htmlOnPauseBlockHeight`: An integer. if `htmlOnPauseBlock` is set, then it sets the container height. Default: `null` .
   * `htmlOnPauseBlockWidth`: An integer. if `htmlOnPauseBlock` is set, then it sets the container width. Default: `null`.
   * `responsive`: If set to `true`, the player will stretch horizontally to 100% of its parent container width. Default: `false`.
+  * `mute`: If set to `true`, the player will be muted by default on page load. Default: `  false`.
 
 ### Integration with popular frameworks
 
